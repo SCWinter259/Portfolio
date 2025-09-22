@@ -13,29 +13,14 @@ const ContentTabs = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to bottom, #8ec5fc, #5a9bd4)", // Smooth continuation from hero
+        background: "linear-gradient(to top, #e0c3fc, #8ec5fc)", // Smooth continuation from hero
         minHeight: "100vh",
         color: "white",
         pt: 4,
         pb: 8,
+        px: 4,
       }}
     >
-      <Paper
-        elevation={3}
-        sx={{
-          width: { xs: "95%", sm: "80%", md: "70%" },
-          mx: "auto",
-          backgroundColor: "rgba(255,255,255,0.08)", // subtle transparent card
-          borderRadius: 3,
-          p: 3,
-          backdropFilter: "blur(12px)",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease",
-          "&:hover": {
-            transform: "translateY(-5px)",
-            boxShadow: "0 10px 20px rgba(0,0,0,0.25)",
-          },
-        }}
-      >
         {/* Tabs */}
         <Tabs
           value={activeTab}
@@ -62,7 +47,6 @@ const ContentTabs = () => {
           {activeTab === 0 && <Projects />}
           {activeTab === 1 && <Experience />}
         </Box>
-      </Paper>
     </Box>
   );
 };
