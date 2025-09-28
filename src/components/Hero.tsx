@@ -49,18 +49,51 @@ const Hero = ({handleMoveToContent}: HeroProps) => {
       </Container>
 
       <Box
-        onClick={handleMoveToContent}
+      onClick={handleMoveToContent}
+      sx={{
+        position: "absolute",
+        bottom: 30,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        cursor: "pointer",
+        color: "white",
+        transition: "color 0.3s ease",
+        "&:hover": {
+          color: "#e0c3fc",
+        },
+      }}
+    >
+      {/* Dancing Arrow */}
+      <KeyboardArrowDownIcon
         sx={{
-          position: "absolute",
-          bottom: 20,
-          cursor: "pointer",
-          color: "white",
-          "&:hover": { color: "#e0c3fc", transform: "translateY(5px)" },
-          transition: "all 0.3s ease",
+          fontSize: 60,
+          animation: "bounce 1.5s infinite",
+          "@keyframes bounce": {
+            "0%, 100%": {
+              transform: "translateY(0)",
+            },
+            "50%": {
+              transform: "translateY(8px)",
+            },
+          },
+        }}
+      />
+
+      {/* Scroll Down Text */}
+      <Typography
+        variant="body2"
+        sx={{
+          mt: 1,
+          fontSize: "0.9rem",
+          letterSpacing: 1,
+          color: "rgba(255,255,255,0.85)",
+          textTransform: "uppercase",
         }}
       >
-        <KeyboardArrowDownIcon sx={{ fontSize: 60 }} />
-      </Box>
+        Scroll Down
+      </Typography>
+    </Box>
     </Box>
   );
 };
