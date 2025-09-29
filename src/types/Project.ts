@@ -6,5 +6,5 @@ export interface Project {
     image: string;
     tech: ReactElement[];
     github?: string;
-    liveDemo?: string;
+    demoVideo?: string;
 }

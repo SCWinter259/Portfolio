@@ -9,8 +9,7 @@ import {
   Button,
   type GridSize,
 } from "@mui/material";
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
+import { FaGithub, FaYoutube } from "react-icons/fa";
 import type { Project } from "../types/Project";
 import type { ResponsiveStyleValue } from '@mui/system';
 
@@ -87,7 +86,7 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
         <CardActions
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
             px: 2,
             pb: 2,
           }}
@@ -107,10 +106,10 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
             GitHub
           </Button>}
 
-          {project.liveDemo && <Button
+          {project.demoVideo && <Button
             size="small"
-            startIcon={<FiExternalLink />}
-            href={project.liveDemo}
+            startIcon={<FaYoutube />}
+            href={project.demoVideo}
             target="_blank"
             sx={{
               p: 1,
@@ -119,7 +118,7 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
               "&:hover": { backgroundColor: "rgba(255,255,255,0.15)" },
             }}
           >
-            Live Demo
+            Demo Video
           </Button>}
         </CardActions>
       </Card>

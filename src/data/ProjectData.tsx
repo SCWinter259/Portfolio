@@ -1,9 +1,28 @@
-import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiExpress, SiGooglegemini } from "react-icons/si";
+import { FaReact, FaNodeJs, FaDocker, FaHtml5, FaCss3, FaBootstrap } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiExpress,
+  SiGooglegemini,
+  SiRedux,
+  SiDotnet,
+  SiMui,
+  SiJavascript,
+  SiMongodb,
+  SiHeroku,
+  SiDjango,
+  SiPostgresql
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
 import { VscAzure } from "react-icons/vsc";
+import { DiMsqlServer } from "react-icons/di";
 import peakcvPic from "../assets/projectPics/PeakCV.png";
+import finSharkPic from "../assets/projectPics/FinShark.png";
+import memoriesPic from "../assets/projectPics/Memories.png";
+import chartreusePic from "../assets/projectPics/Chartreuse.png";
+import type { Project } from "../types/Project";
 
-export const notableProjects = [
+export const notableProjects: Project[] = [
   {
     title: "PeakCV",
     description:
@@ -12,6 +31,7 @@ export const notableProjects = [
     tech: [
       <SiTypescript size={24} color="#007ACC" />,
       <FaReact size={24} color="#61DAFB" />,
+      <SiRedux size={24} color="#764ABC" />,
       <SiTailwindcss size={24} color="#38BDF8" />,
       <SiExpress size={24} color="#000000" />,
       <FaNodeJs size={24} color="#68A063" />,
@@ -20,8 +40,60 @@ export const notableProjects = [
       <VscAzure size={24} color="#0078D4" />,
     ],
     github: "https://github.com/SCWinter259/PeakCV?tab=readme-ov-file",
-    liveDemo: "https://youtu.be/e5-qzMbI98Y",
+    demoVideo: "https://youtu.be/e5-qzMbI98Y",
   },
+  {
+    title: "FinShark",
+    description:
+      "A finance web application that allows users to search for publicly traded companies, view their financial reports and price chart, make comments on a ticker, as well as adding them to a portfolio.",
+    image: finSharkPic,
+    tech: [
+      <SiTypescript size={24} color="#007ACC" />,
+      <FaReact size={24} color="#61DAFB" />,
+      <SiRedux size={24} color="#764ABC" />,
+      <SiTailwindcss size={24} color="#38BDF8" />,
+      <TbBrandCSharp size={24} color="#9B4F96" />,
+      <SiDotnet size={24} color="#512BD4" />,
+      <DiMsqlServer size={24} color="#CC2929" />,
+      <VscAzure size={24} color="#0078D4" />,
+    ],
+    github: "https://github.com/SCWinter259/FinShark?tab=readme-ov-file",
+    demoVideo: "https://youtu.be/6lxHo6N4gjM"
+  },
+  {
+    title: "Memories",
+    description: "A social media web application that allows users to post pictures along with their notes, as well as like and comment on other posts.",
+    image: memoriesPic,
+    tech: [
+      <SiTypescript size={24} color="#007ACC" />,
+      <FaReact size={24} color="#61DAFB" />,
+      <SiRedux size={24} color="#764ABC" />,
+      <SiMui size={24} color="#007FFF" />,
+      <SiJavascript size={24} color="#F7DF1E" />,
+      <SiExpress size={24} color="#000000" />,
+      <FaNodeJs size={24} color="#68A063" />,
+      <SiMongodb size={24} color="#47A248" />,
+      <SiHeroku size={24} color="#430098" />,
+    ],
+    github: "https://github.com/SCWinter259/Memories",
+    demoVideo: "https://youtu.be/TBIxqdq7whQ"
+  },
+  {
+    title: "Chartreuse",
+    description: "A CMPUT 404 team project where we built a distributed social network platform on which users can post in Markdown, post with a picture, comment, like, repost. Notably, servers from different teams can connect to each other!",
+    image: chartreusePic,
+    tech: [
+      <FaHtml5 size={24} color="#E34F26" />,
+      <FaCss3 size={24} color="#1572B6" />,
+      <SiJavascript size={24} color="#F7DF1E" />,
+      <FaBootstrap size={24} color="#563D7C" />,
+      <SiDjango size={24} color="#092E20" />,
+      <SiPostgresql size={24} color="#336791" />,
+      <SiHeroku size={24} color="#430098" />,
+    ],
+    github: "https://github.com/SCWinter259/chartreuse",
+    demoVideo: "https://youtu.be/gfmW2677Xg0?si=ppLdMEgARi_OxWWI",
+  }
 ];
 
 export const otherProjects = [];
