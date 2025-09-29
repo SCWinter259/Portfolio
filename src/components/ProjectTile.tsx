@@ -93,7 +93,7 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
         >
           {project.github && <Button
             size="small"
-            startIcon={<FaGithub />}
+            startIcon={<FaGithub style={{ color: "#F5F5F5" }}/>}
             href={project.github}
             target="_blank"
             sx={{
@@ -108,7 +108,7 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
 
           {project.demoVideo && <Button
             size="small"
-            startIcon={<FaYoutube />}
+            startIcon={<FaYoutube style={{ color: "#FF0000" }}/>}
             href={project.demoVideo}
             target="_blank"
             sx={{
