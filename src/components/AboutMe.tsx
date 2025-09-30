@@ -1,7 +1,16 @@
 import { Box, Typography, Avatar, IconButton } from "@mui/material";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiTypescript, SiDocker, SiMongodb, SiPostgresql } from "react-icons/si";
+import {
+  SiTypescript,
+  SiDocker,
+  SiMongodb,
+  SiPostgresql,
+  SiPython,
+  SiTailwindcss,
+} from "react-icons/si";
 import profilePic from "../assets/profile.jpg";
+import { iconColors } from "../constants/colors";
+import { VscAzure } from "react-icons/vsc";
 
 const AboutMe = () => {
   return (
@@ -44,10 +53,24 @@ const AboutMe = () => {
           lineHeight: 1.7,
         }}
       >
-        I'm a software developer passionate about building full-stack web
-        applications using modern frameworks and tools. I work with a variety of
-        technologies, from frontend frameworks like React to backend systems and
-        cloud platforms.
+        I'm a Computing Science Graduate from the University of Alberta with
+        close to 2 years of industry experience. I have a strong focus on
+        full-stack web development, but I am also skilled in a range of related
+        areas, including mobile development, building automation pipelines,
+        testing, and even professional documentation writing.
+      </Typography>
+
+      {/* Tech Stack Heading */}
+      <Typography
+        variant="subtitle1"
+        sx={{
+          mt: 2,
+          mb: 2,
+          fontWeight: 500,
+          color: "rgba(255,255,255,0.85)",
+        }}
+      >
+        Some tools I commonly use include:
       </Typography>
 
       {/* Tech Icons Row */}
@@ -61,33 +84,12 @@ const AboutMe = () => {
           mt: 2,
         }}
       >
-        <IconButton sx={{ color: "#61dafb" }} aria-label="React">
-          <FaReact size={40} />
-        </IconButton>
-
-        <IconButton sx={{ color: "#3178c6" }} aria-label="TypeScript">
-          <SiTypescript size={36} />
-        </IconButton>
-
-        <IconButton sx={{ color: "#68a063" }} aria-label="Node.js">
-          <FaNodeJs size={40} />
-        </IconButton>
-
-        <IconButton sx={{ color: "#13aa52" }} aria-label="MongoDB">
-          <SiMongodb size={36} />
-        </IconButton>
-
-        <IconButton sx={{ color: "#336791" }} aria-label="PostgreSQL">
-          <SiPostgresql size={36} />
-        </IconButton>
-
-        <IconButton sx={{ color: "#0db7ed" }} aria-label="Docker">
-          <SiDocker size={36} />
-        </IconButton>
-
-        <IconButton sx={{ color: "#f1502f" }} aria-label="Git">
-          <FaGitAlt size={40} />
-        </IconButton>
+        <SiPython size={40} color={iconColors.python} />
+        <SiTypescript size={40} color={iconColors.typescript} />
+        <FaReact size={40} color={iconColors.react} />
+        <SiTailwindcss size={40} color={iconColors.tailwindcss} />
+        <FaNodeJs size={40} color={iconColors.nodejs} />
+        <VscAzure size={40} color={iconColors.azure} />
       </Box>
     </Box>
   );

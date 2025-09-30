@@ -40,11 +40,10 @@ const Hero = ({handleMoveToContent}: HeroProps) => {
           Casper Nguyen
         </Typography>
         <Typography variant="h5" gutterBottom>
-          Software Developer
+          Full Stack Developer
         </Typography>
         <Typography variant="body1" sx={{ mb: 3 }}>
-          Passionate about building modern web applications with React and
-          TypeScript
+          Passionate about building modern web applications and beyond.
         </Typography>
       </Container>
 
