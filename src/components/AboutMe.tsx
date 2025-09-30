@@ -1,10 +1,7 @@
-import { Box, Typography, Avatar, IconButton } from "@mui/material";
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { Box, Typography, Avatar } from "@mui/material";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiTypescript,
-  SiDocker,
-  SiMongodb,
-  SiPostgresql,
   SiPython,
   SiTailwindcss,
 } from "react-icons/si";
