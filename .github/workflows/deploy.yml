@@ -28,4 +28,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages   # branch to deploy to
-          folder: build      # folder to deploy (for React, build is default)
+          folder: dist      # folder to deploy (for Vite, dist is default)
