@@ -12,6 +12,7 @@ import {
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import type { Project } from "../types/Project";
 import type { ResponsiveStyleValue } from '@mui/system';
+import { iconColors } from "../constants/colors";
 
 interface ProjectTileProps {
   project: Project;
@@ -93,7 +94,7 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
         >
           {project.github && <Button
             size="small"
-            startIcon={<FaGithub style={{ color: "#F5F5F5" }}/>}
+            startIcon={<FaGithub style={{ color: iconColors.github }}/>}
             href={project.github}
             target="_blank"
             sx={{
@@ -108,7 +109,7 @@ const ProjectTile = ({ project, index, gridSize, imageHeight }: ProjectTileProps
 
           {project.demoVideo && <Button
             size="small"
-            startIcon={<FaYoutube style={{ color: "#FF0000" }}/>}
+            startIcon={<FaYoutube style={{ color: iconColors.youtube }}/>}
             href={project.demoVideo}
             target="_blank"
             sx={{

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { themeColors } from "../constants/colors";
 
 interface HeroProps {
   handleMoveToContent: () => void;
@@ -27,7 +28,7 @@ const Hero = ({handleMoveToContent}: HeroProps) => {
       sx={{
         position: "relative",
         height: "100vh",
-        background: "linear-gradient(to bottom, #e0c3fc, #8ec5fc)",
+        background: `linear-gradient(to bottom, ${themeColors.primary2}, ${themeColors.primary1})`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -59,7 +60,7 @@ const Hero = ({handleMoveToContent}: HeroProps) => {
         color: "white",
         transition: "color 0.3s ease",
         "&:hover": {
-          color: "#e0c3fc",
+          color: themeColors.primary2,
         },
       }}
     >

@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+import { themeColors } from "./constants/colors";
 
 const theme = createTheme({
   typography: {
@@ -10,10 +11,7 @@ const theme = createTheme({
     button: { textTransform: "none", fontWeight: 500 },
   },
   palette: {
-    primary: { main: "#e0c3fc" }, // light purple
-    secondary: { main: "#8ec5fc" }, // soft blue
-    background: { default: "#8ec5fc", paper: "rgba(255,255,255,0.05)" },
-    text: { primary: "#ffffff", secondary: "#cfcfcf" },
+    background: { default: themeColors.primary1, paper: "rgba(255,255,255,0.05)" },
   },
   components: {
     MuiCssBaseline: {

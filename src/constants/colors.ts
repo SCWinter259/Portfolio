@@ -38,5 +38,12 @@ export const iconColors = {
     confluence: "#0052CC",
     expo: "#000000",
     selenium: "#43B03A",
+    github: "#F5F5F5",
+    youtube: "#FF0000",
     // git: "#F05032",
 };
+
+export const themeColors = {
+    primary1: "#012975",
+    primary2: "#E094EE"
+}

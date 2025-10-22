@@ -1,6 +1,7 @@
 import { Box, Typography, Grid } from "@mui/material";
 import { experiences } from "../data/ExperienceData";
 import ExperienceTile from "./ExperienceTile";
+import { themeColors } from "../constants/colors";
 
 const Experiences: React.FC = () => {
   return (
@@ -48,7 +49,7 @@ const Experiences: React.FC = () => {
             left: "48px",
             width: "4px", // increased from 2px
             height: "100%",
-            backgroundColor: "#e0c3fc", // brighter
+            backgroundColor: themeColors.primary2, // brighter
             zIndex: 1,
             borderRadius: "2px", // optional, for smoother edges
           }}

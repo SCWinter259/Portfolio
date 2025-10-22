@@ -3,6 +3,7 @@ import { Box, Tabs, Tab, Slide } from "@mui/material";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Experiences from "./Experiences";
+import { themeColors } from "../constants/colors";
 
 const ContentTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,7 +21,7 @@ const ContentTabs = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to top, #e0c3fc, #8ec5fc)",
+        background: `linear-gradient(to top, ${themeColors.primary2}, ${themeColors.primary1})`,
         minHeight: "100vh",
         color: "white",
         pt: 4,
@@ -45,10 +46,10 @@ const ContentTabs = () => {
             minWidth: 120,
             px: 3,
             transition: "all 0.3s ease",
-            "&:hover": { color: "#f0e6ff" },
-            "&.Mui-selected": { fontWeight: "bold", color: "#e0c3fc" },
+            "&:hover": { color: themeColors.primary2 },
+            "&.Mui-selected": { fontWeight: "bold", color: themeColors.primary2 },
           },
-          "& .MuiTabs-indicator": { backgroundColor: "#e0c3fc", height: 3, borderRadius: 2 },
+          "& .MuiTabs-indicator": { backgroundColor: themeColors.primary2, height: 3, borderRadius: 2 },
         }}
       >
         <Tab label="About Me" />

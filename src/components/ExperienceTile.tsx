@@ -1,5 +1,6 @@
 import type { Experience } from "../types/Experience";
 import { Box, Grid, Typography } from "@mui/material";
+import { themeColors } from "../constants/colors";
 
 interface ExperienceTileProps {
   exp: Experience;
@@ -18,7 +19,7 @@ const ExperienceTile = ({ exp, index }: ExperienceTileProps) => {
           width: 16,
           height: 16,
           borderRadius: "50%",
-          backgroundColor: "#e0c3fc",
+          backgroundColor: themeColors.primary2,
           border: "3px solid white",
           transform: "translateX(-50%)",
           zIndex: 2,
@@ -32,7 +33,7 @@ const ExperienceTile = ({ exp, index }: ExperienceTileProps) => {
           variant="h6"
           sx={{
             fontWeight: "bold",
-            color: "#e0c3fc", // still matches the pink in your theme
+            color: themeColors.primary2, // still matches the pink in your theme
             textShadow: "0 0 6px rgba(224,195,252,0.4)", // soft glow
             mb: 0.5,
           }}
