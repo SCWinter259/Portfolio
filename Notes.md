@@ -16,6 +16,7 @@ scripts for production, development, and staging environments.
 - Upgraded dependencies on `divorcepath-intake` to address security issues.
 - Built 3 Zapier pipelines to move data from Stripe to Attio.
 - Helped response to clients on Intercom.
+- Set up Claude skills for the company
 
 Ongoing work:
 - 
@@ -42,10 +43,11 @@ Divorcepath technologies involved:
   - Attio
   - Zapier
   - OpenAI
-  - AWS (S3, Lambda, CloudWatch, CloudFormation, ECR)
+  - AWS (Elastic Beanstalk, S3, Lambda, CloudWatch, CloudFormation, ECR)
   - Aikido
   - Github (and Github CI/CD)
   - Intercom
+  - Linear
  
 Utilized multiple AI Tools:
 - Cursor
