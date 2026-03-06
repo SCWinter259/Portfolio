@@ -10,10 +10,11 @@ Performed optimizations, inluding runtime optimization - reducing extraction tim
 even though the function is about 10 times heavier due to dependencies. Saved the company some money by doing this instead of hosting extractor on EC2 like initially planned. Also wrote automated Github deployment
 scripts for production, development, and staging environments.
 - Worked on `divorcepath-ui`. Made UI updates, improving user experience. Fixed Bugs. 
-- Addressed multiple Aikido security problems in preparation for SOC 2 audit.
+- Prepared SOC 2 documents. Wrote shell script for automated evidence colelction too.
 - Set up cost abnormality alerts and tool failure alerts from AWS, sending to team Emails and Slack, ensuring rapid response.
 - Worked on `divorcepath-api`. Built seeding scripts that generate detailed like-real data, used for real client demos.
-- Upgraded dependencies on `divorcepath-intake` to address security issues.
+- Addressed Aikido security issues and Sentry bug reports.
+- Performed many dependency upgrades across many repos.
 - Built 3 Zapier pipelines to move data from Stripe to Attio.
 - Helped response to clients on Intercom.
 - Set up Claude skills for the company
@@ -45,6 +46,7 @@ Divorcepath technologies involved:
   - OpenAI
   - AWS (Elastic Beanstalk, S3, Lambda, CloudWatch, CloudFormation, ECR)
   - Aikido
+  - Sentry
   - Github (and Github CI/CD)
   - Intercom
   - Linear
