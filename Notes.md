@@ -2,26 +2,32 @@
 
 ## Incoming Information
 
-Divorcepath contributions:
-- Worked on 2 automation workflows on Attio, helped maintained Attio data integrity and saves about $100 every month.
-- Worked on `gtm` - collect potential customer data through scraping, integrating with third-party (Apollo, Attio), designed database and a way to clean stale data.
-- Worked on `data-extractor`. Moved the repo from relying on API to extract markdown scripts from PDFs and Word docs to using libraries to do the work on its own. Used OpenAI API to extract info from markdown.
-Performed optimizations, inluding runtime optimization - reducing extraction time by ~60%, Dockerizing the data extractor so that it can continue be deployed as a Lambda function (through ECR and Docker),
-even though the function is about 10 times heavier due to dependencies. Saved the company some money by doing this instead of hosting extractor on EC2 like initially planned. Also wrote automated Github deployment
-scripts for production, development, and staging environments.
-- Worked on `divorcepath-ui`. Made UI updates, improving user experience. Fixed Bugs. 
-- Prepared SOC 2 documents. Wrote shell script for automated evidence colelction too.
-- Set up cost abnormality alerts and tool failure alerts from AWS, sending to team Emails and Slack, ensuring rapid response.
-- Worked on `divorcepath-api`. Built seeding scripts that generate detailed like-real data, used for real client demos.
-- Addressed Aikido security issues and Sentry bug reports.
-- Performed many dependency upgrades across many repos.
-- Built 3 Zapier pipelines to move data from Stripe to Attio.
-- Helped response to clients on Intercom.
-- Set up Claude skills for the company
+### UI and API
 
-Ongoing work:
-- 
+- Performed bugs fixes.
+- Built a seeding script that seeds realistic data, used for internal End-to-end testing, automated tests, and client demos.
+- Built a status page that notifies the team on service interruptions.
+- Built an internal analytics dashboard that provides valuable information on user actions, behaviours, feature usage and efficiency.
 
+### gtm
+
+- Upgraded an automation pipeline with 2 Attio and 3 Zapier workflows which helped maintaining data integrity and saved $100 in monthly automation credits.
+- Utilized Bun, TypeScript, AWS RDS, and web scraping techniques to build a data collection system that brought the company over 10,000 potential client contacts.
+
+### Data Extractor
+
+- Utilized Python, AWS Textract, AWS Bedrock, and AWS Lambda to extract valuable data from PDFs, Word documents, and images, saving 4 hours of work per user every week.
+- Created synthetic test documents and benchmarked for 15+ AWS Bedrock LLM models and Optical Character Recognization (OCR) packages, which helped optimized costs and performance for the data extraction pipeline.
+- Improved accuracy of data extraction by 15% and speed by 60%, while reducing the Docker container size and deployment time by 80%.
+- Performed security updates, package replacements, and design changes to keep data extractor in-line with SOC 2 requirements and data locality requirements from government agencies.
+
+### Other
+
+- Answer to clients on Intercom
+- Prepared SOC 2 documents and wrote shell script for automated evidence collection
+- Build Claude skills and the company's private skills marketplace.
+- Performed multiple dependency upgrades and security patches across multiple repos.
+- Set up cost abnormality alerts and tool failure alerts from AWS
 
 Divorcepath technologies involved:
 
@@ -44,7 +50,7 @@ Divorcepath technologies involved:
   - Attio
   - Zapier
   - OpenAI
-  - AWS (Elastic Beanstalk, S3, Lambda, CloudWatch, CloudFormation, ECR)
+  - AWS (Elastic Beanstalk, S3, Lambda, CloudWatch, CloudFormation, ECR, Textract, Bedrock, RDS)
   - Aikido
   - Sentry
   - Github (and Github CI/CD)
