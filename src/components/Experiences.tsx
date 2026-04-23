@@ -1,66 +1,78 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { useRef } from "react";
+import { Box, Typography } from "@mui/material";
+import { motion, useInView } from "framer-motion";
 import { experiences } from "../data/ExperienceData";
 import ExperienceTile from "./ExperienceTile";
 import { themeColors } from "../constants/colors";
 
-const Experiences: React.FC = () => {
-  return (
-    <Box
-      id="experience"
-      sx={{
-        py: 8,
-        px: { xs: 2, md: 8 },
-        color: "white",
-        position: "relative",
-        maxWidth: "1000px",
-        mx: "auto",
-        borderRadius: "20px",
-        backgroundColor: "rgba(75, 75, 100, 0.30)", // slightly lighter
-        backdropFilter: "blur(12px)", // smooth glass effect
-        border: "1px solid rgba(255,255,255,0.05)", // soft, subtle border
-        boxShadow: "0 4px 15px rgba(0,0,0,0.15)", // softer shadow
-      }}
-    >
-      {/* Section Title */}
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: "bold",
-          mb: 6,
-          textAlign: "center",
-        }}
-      >
-        Experiences
-      </Typography>
+const Experiences = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
-      <Box
-        sx={{
-          position: "relative",
-          maxWidth: "900px",
-          mx: "auto",
-          pl: 8, // Space for timeline
-        }}
+  return (
+    <Box ref={ref} sx={{ maxWidth: 900, mx: "auto" }}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
       >
-        {/* Vertical Timeline Line */}
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 700,
+            color: themeColors.text,
+            mb: 6,
+            textAlign: "center",
+          }}
+        >
+          Experience
+        </Typography>
+      </motion.div>
+
+      <Box sx={{ position: "relative" }}>
+        {/* Timeline line */}
         <Box
           sx={{
             position: "absolute",
+            left: 20,
             top: 0,
-            left: "48px",
-            width: "4px", // increased from 2px
-            height: "100%",
-            backgroundColor: themeColors.primary2, // brighter
-            zIndex: 1,
-            borderRadius: "2px", // optional, for smoother edges
+            bottom: 0,
+            width: 2,
+            background: `linear-gradient(to bottom, ${themeColors.accent}, ${themeColors.accentBright}, transparent)`,
+            display: { xs: "none", sm: "block" },
           }}
         />
 
-        {/* Timeline Items */}
-        <Grid container direction="column" spacing={6}>
-          {experiences.map((exp, index) => (
-            <ExperienceTile exp={exp} index={index} />
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          {experiences.map((exp, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: 40 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
+            >
+              <Box sx={{ position: "relative", pl: { xs: 0, sm: 7 } }}>
+                {/* Timeline dot */}
+                <Box
+                  sx={{
+                    position: "absolute",
+                    left: 15,
+                    top: 24,
+                    width: 12,
+                    height: 12,
+                    borderRadius: "50%",
+                    backgroundColor: themeColors.accent,
+                    border: `2px solid ${themeColors.bg}`,
+                    boxShadow: `0 0 12px ${themeColors.accent}`,
+                    zIndex: 2,
+                    display: { xs: "none", sm: "block" },
+                  }}
+                />
+                <ExperienceTile exp={exp} />
+              </Box>
+            </motion.div>
           ))}
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );

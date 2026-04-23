@@ -13,7 +13,7 @@ export const iconColors = {
     react: "#61DAFB",
     redux: "#764ABC",
     materialui: "#007FFF",
-    express: "#000000",
+    express: "#999999",
     nodejs: "#68A063",
     mongodb: "#47A248",
     semanticui: "#2185D0",
@@ -36,14 +36,20 @@ export const iconColors = {
     gitbook: "#3884FF",
     jira: "#0052CC",
     confluence: "#0052CC",
-    expo: "#000000",
+    expo: "#AAAAAA",
     selenium: "#43B03A",
     github: "#F5F5F5",
     youtube: "#FF0000",
-    // git: "#F05032",
 };
 
 export const themeColors = {
-    primary1: "#012975",
-    primary2: "#E094EE"
-}
+    bg: "#0a0a1a",
+    surface: "rgba(139, 92, 246, 0.06)",
+    surfaceHover: "rgba(139, 92, 246, 0.12)",
+    surfaceBorder: "rgba(139, 92, 246, 0.12)",
+    accent: "#c084fc",
+    accentBright: "#e879f9",
+    text: "#f0eaff",
+    textMuted: "rgba(240, 234, 255, 0.65)",
+    textSubtle: "rgba(240, 234, 255, 0.4)",
+};

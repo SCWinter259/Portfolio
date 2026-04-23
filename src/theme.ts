@@ -11,13 +11,13 @@ const theme = createTheme({
     button: { textTransform: "none", fontWeight: 500 },
   },
   palette: {
-    background: { default: themeColors.primary1, paper: "rgba(255,255,255,0.05)" },
+    background: { default: themeColors.bg, paper: themeColors.surface },
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         html: {
-          scrollBehavior: "smooth", // Smooth scrolling globally
+          scrollBehavior: "smooth",
         },
       },
     },
