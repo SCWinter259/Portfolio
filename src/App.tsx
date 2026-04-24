@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Experiences from "./components/Experiences";
+import Education from "./components/Education";
 import Footer from "./components/Footer";
 import { themeColors } from "./constants/colors";
 
@@ -166,15 +167,22 @@ function App() {
         <AboutMe />
       </Box>
 
-      <Box id="projects" sx={{ py: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}>
-        <Projects />
-      </Box>
-
       <Box
         id="experience"
         sx={{ py: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}
       >
         <Experiences />
+      </Box>
+
+      <Box
+        id="education"
+        sx={{ py: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}
+      >
+        <Education />
+      </Box>
+
+      <Box id="projects" sx={{ py: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}>
+        <Projects />
       </Box>
 
       <Footer />

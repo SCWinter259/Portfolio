@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Avatar, Box, Typography } from "@mui/material";
 import type { Experience } from "../types/Experience";
 import { themeColors } from "../constants/colors";
 
@@ -33,23 +33,35 @@ const ExperienceTile = ({ exp }: ExperienceTileProps) => {
           mb: 1,
         }}
       >
-        <Box>
-          <Typography
-            variant="h6"
+        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Avatar
+            src={exp.logo}
+            alt={exp.company}
+            variant="rounded"
             sx={{
-              fontWeight: 600,
-              color: themeColors.text,
-              fontSize: "1.05rem",
+              width: 44,
+              height: 44,
+              border: `1px solid ${themeColors.surfaceBorder}`,
             }}
-          >
-            {exp.role}
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            sx={{ color: themeColors.accent, fontWeight: 500 }}
-          >
-            {exp.company}
-          </Typography>
+          />
+          <Box>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 600,
+                color: themeColors.text,
+                fontSize: "1.05rem",
+              }}
+            >
+              {exp.role}
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{ color: themeColors.accent, fontWeight: 500 }}
+            >
+              {exp.company}
+            </Typography>
+          </Box>
         </Box>
         <Box sx={{ textAlign: "right" }}>
           <Typography

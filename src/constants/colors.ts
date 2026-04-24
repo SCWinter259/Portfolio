@@ -40,6 +40,11 @@ export const iconColors = {
     selenium: "#43B03A",
     github: "#F5F5F5",
     youtube: "#FF0000",
+    graphql: "#E10098",
+    prisma: "#2D3748",
+    bun: "#FBF0DF",
+    openai: "#412991",
+    aws: "#FF9900",
 };
 
 export const themeColors = {

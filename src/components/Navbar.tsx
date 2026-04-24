@@ -5,8 +5,9 @@ import resume from "../assets/Casper_Nguyen_Resume.pdf";
 
 const navLinks = [
   { label: "About", target: "about" },
-  { label: "Projects", target: "projects" },
   { label: "Experience", target: "experience" },
+  { label: "Education", target: "education" },
+  { label: "Projects", target: "projects" },
 ];
 
 const Navbar = () => {

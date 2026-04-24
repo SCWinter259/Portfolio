@@ -5,6 +5,8 @@ import {
   FaConfluence,
   FaHtml5,
   FaCss3,
+  FaAws,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -22,13 +24,50 @@ import {
   SiPostgresql,
   SiSelenium,
   SiHeroku,
+  SiGraphql,
+  SiPrisma,
+  SiBun,
+  SiOpenai,
 } from "react-icons/si";
 import type { Experience } from "../types/Experience";
 import { iconColors } from "../constants/colors";
+import divorcepathLogo from "../assets/Divorcepath.jpeg";
+import imagineCitiesLogo from "../assets/ImagineCities.jpeg";
+import blackberryLogo from "../assets/BlackBerry.jpeg";
+import ameliaLogo from "../assets/amelia.jpeg";
 
 export const experiences: Experience[] = [
   {
+    company: "Divorcepath",
+    logo: divorcepathLogo,
+    role: "Software Engineer",
+    duration: "Nov 2025 - Present",
+    location: "Calgary, AB",
+    achievements: [
+      "Rebuilt the document data extraction pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, serving 400+ users and processing 2,800+ documents daily while saving users an average of 4 hours of manual work per week.",
+      "Benchmarked 15+ AWS Bedrock LLM models and OCR packages using synthetic test documents, improving extraction accuracy by 15% and speed by 60% while reducing Docker container size and deployment time by 80%.",
+      "Built an internal analytics dashboard tracking 67 metrics across 7 sections using React, TypeScript, and GraphQL, providing leadership with actionable insights on user engagement, feature adoption, and organization health.",
+      "Created an AI assistant agent using CopilotKit, Mastra, and OpenAI API, enabling users to create client files, fill out forms, and query legal information through natural language.",
+      "Built a production service status page monitoring 8 services with Sanity CMS and Slack integration, delivering automated incident notifications within 60 seconds and hosting public incident reports.",
+      "Built a data collection system using Bun, TypeScript, AWS RDS, and web scraping, sourcing 10,000+ potential client contacts and generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
+      "Authored over 1,000 unit and integration tests using Vitest, bun:test, and Playwright across all implemented features, ensuring code reliability and preventing regressions.",
+    ],
+    tech: [
+      <SiTypescript size={20} color={iconColors.typescript} />,
+      <FaPython size={20} color={iconColors.python} />,
+      <FaReact size={20} color={iconColors.react} />,
+      <SiGraphql size={20} color={iconColors.graphql} />,
+      <FaDocker size={20} color={iconColors.docker} />,
+      <FaAws size={20} color={iconColors.aws} />,
+      <SiPostgresql size={20} color={iconColors.postgresql} />,
+      <SiPrisma size={20} color={iconColors.prisma} />,
+      <SiBun size={20} color={iconColors.bun} />,
+      <SiOpenai size={20} color={iconColors.openai} />,
+    ],
+  },
+  {
     company: "Imagine Cities",
+    logo: imagineCitiesLogo,
     role: "Software Developer",
     duration: "May 2025 - Present",
     location: "Remote",
@@ -43,6 +82,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "BlackBerry",
+    logo: blackberryLogo,
     role: "Software Developer / Technical Writer Student",
     duration: "Jan 2024 - Aug 2024",
     location: "Waterloo, ON",
@@ -65,6 +105,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Amelia",
+    logo: ameliaLogo,
     role: "Software Engineer Intern",
     duration: "Oct 2023 - Dec 2023",
     location: "Remote",
@@ -81,6 +122,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Imagine Cities",
+    logo: imagineCitiesLogo,
     role: "Software Developer",
     duration: "Sep 2023 - Dec 2023",
     location: "Edmonton, AB",

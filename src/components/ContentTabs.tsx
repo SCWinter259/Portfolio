@@ -14,14 +14,14 @@ const ContentTabs = () => {
 
   const tabContent = [
     <AboutMe key={0} />,
-    <Projects key={1} />,
-    <Experiences key={2} />,
+    <Experiences key={1} />,
+    <Projects key={2} />,
   ];
 
   return (
     <Box
       sx={{
-        background: `linear-gradient(to top, ${themeColors.primary2}, ${themeColors.primary1})`,
+        background: `linear-gradient(to top, ${themeColors.accent}, ${themeColors.bg})`,
         minHeight: "100vh",
         color: "white",
         pt: 4,
@@ -46,15 +46,15 @@ const ContentTabs = () => {
             minWidth: 120,
             px: 3,
             transition: "all 0.3s ease",
-            "&:hover": { color: themeColors.primary2 },
-            "&.Mui-selected": { fontWeight: "bold", color: themeColors.primary2 },
+            "&:hover": { color: themeColors.accent },
+            "&.Mui-selected": { fontWeight: "bold", color: themeColors.accent },
           },
-          "& .MuiTabs-indicator": { backgroundColor: themeColors.primary2, height: 3, borderRadius: 2 },
+          "& .MuiTabs-indicator": { backgroundColor: themeColors.accent, height: 3, borderRadius: 2 },
         }}
       >
         <Tab label="About Me" />
-        <Tab label="Projects" />
         <Tab label="Experiences" />
+        <Tab label="Projects" />
       </Tabs>
 
       {/* Tab Content */}

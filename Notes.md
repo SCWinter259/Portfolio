@@ -68,6 +68,5 @@
 - Built a production service status page monitoring 8 services with Sanity CMS and Slack integration, delivering automated incident notifications within 60 seconds and hosting public incident reports.
 - Built a data collection system using Bun, TypeScript, AWS RDS, and web scraping, sourcing 10,000+ potential client contacts and generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.
 - Authored over 1,000 unit and integration tests using Vitest, bun:test, and Playwright across all implemented features, ensuring code reliability and preventing regressions.
-- Contributed to achieving SOC 2 Type I certification by preparing compliance documents, writing automated evidence collection scripts, and enforcing data locality through North America-only AWS service routing.
 
 **Tech**: TypeScript, Python, React, GraphQL, Docker, AWS, PostgreSQL, Prisma, Bun, Sanity, Attio

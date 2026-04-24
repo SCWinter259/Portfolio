@@ -9,8 +9,14 @@ import {
 } from "@mui/material";
 import { motion, useInView } from "framer-motion";
 import { FaReact, FaNodeJs, FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiTypescript, SiPython, SiTailwindcss } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
+import {
+  SiTypescript,
+  SiPython,
+  SiTailwindcss,
+  SiBun,
+  SiFirebase,
+} from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import profilePic from "../assets/profile.jpg";
 import { iconColors, themeColors } from "../constants/colors";
@@ -33,7 +39,9 @@ const techStack = [
     color: iconColors.nodejs,
     label: "Node.js",
   },
-  { icon: <VscAzure size={28} />, color: iconColors.azure, label: "Azure" },
+  { icon: <SiBun size={28} />, color: iconColors.bun, label: "Bun" },
+  { icon: <SiFirebase size={28} />, color: iconColors.firebase, label: "Firebase" },
+  { icon: <FaAws size={28} />, color: iconColors.aws, label: "AWS" },
 ];
 
 const AboutMe = () => {
@@ -106,11 +114,10 @@ const AboutMe = () => {
               variant="body1"
               sx={{ color: themeColors.textMuted, lineHeight: 1.8, mb: 3 }}
             >
-              I'm a Computing Science Graduate from the University of Alberta
-              with close to 2 years of industry experience. I have a strong
-              focus on full-stack web development, but I'm also skilled in
-              related areas — including mobile development, automation
-              pipelines, testing, and professional documentation writing.
+              I'm a software engineer with 2 years of industry experience. I
+              specialize in full-stack web development and enjoy building
+              things end-to-end — from frontend interfaces to backend
+              pipelines, testing, and cloud infrastructure. 
             </Typography>
 
             <Stack
