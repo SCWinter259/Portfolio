@@ -15,6 +15,7 @@ import {
   SiTailwindcss,
   SiBun,
   SiFirebase,
+  SiPostgresql,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
@@ -40,6 +41,11 @@ const techStack = [
     label: "Node.js",
   },
   { icon: <SiBun size={28} />, color: iconColors.bun, label: "Bun" },
+  {
+    icon: <SiPostgresql size={28} />,
+    color: iconColors.postgresql,
+    label: "PostgreSQL",
+  },
   { icon: <SiFirebase size={28} />, color: iconColors.firebase, label: "Firebase" },
   { icon: <FaAws size={28} />, color: iconColors.aws, label: "AWS" },
 ];
@@ -182,7 +188,7 @@ const AboutMe = () => {
             fontSize: "0.75rem",
           }}
         >
-          Tools I work with
+          Tools I commonly use
         </Typography>
 
         <Box

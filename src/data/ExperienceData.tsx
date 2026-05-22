@@ -45,12 +45,12 @@ export const experiences: Experience[] = [
     location: "Calgary, AB",
     achievements: [
       "Rebuilt the document data extraction pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, serving 400+ users and processing 2,800+ documents daily while saving users an average of 4 hours of manual work per week.",
-      "Benchmarked 15+ AWS Bedrock LLM models and OCR packages using synthetic test documents, improving extraction accuracy by 15% and speed by 60% while reducing Docker container size and deployment time by 80%.",
-      "Built an internal analytics dashboard tracking 67 metrics across 7 sections using React, TypeScript, and GraphQL, providing leadership with actionable insights on user engagement, feature adoption, and organization health.",
-      "Created an AI assistant agent using CopilotKit, Mastra, and OpenAI API, enabling users to create client files, fill out forms, and query legal information through natural language.",
-      "Built a production service status page monitoring 8 services with Sanity CMS and Slack integration, delivering automated incident notifications within 60 seconds and hosting public incident reports.",
+      "Migrated extraction from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.",
+      "Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, and legal workflow automation through natural language.",
+      "Shipped PDF and Word document upload in the AI chat rail, including per-thread S3 attachments, file extraction, drag-and-drop UI, and approval-driven movement into client folders or disclosure entities.",
+      "Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.",
       "Built a data collection system using Bun, TypeScript, AWS RDS, and web scraping, sourcing 10,000+ potential client contacts and generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
-      "Authored over 1,000 unit and integration tests using Vitest, bun:test, and Playwright across all implemented features, ensuring code reliability and preventing regressions.",
+      "Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.",
     ],
     tech: [
       <SiTypescript size={20} color={iconColors.typescript} />,

@@ -4,12 +4,21 @@
 
 **Divorcepath** is a cloud-based family law platform used by 300+ Canadian legal professionals. It automates support calculations, court form generation, financial disclosure, and agreement drafting. 5-person company, 3-person engineering team.
 
+### GitHub Contribution Findings
+- Authored 284 merged PRs across the Divorcepath organization.
+- Repository spread: 112 merged PRs in divorcepath-api, 91 in divorcepath-ui, 33 in divorcepath-data-extractor, plus contributions across documentation, GTM, CMS, intake, Word add-in, and public UI repos.
+- Notable missing themes from the current portfolio summary: AI agent rebuild, document upload in chat, data extractor optimization, CI/reliability work, and document-engine/workflow hardening.
+- Local git history shows 800+ authored commits across the cloned Divorcepath repos, including API, UI, data extractor, documentation, CMS, intake, public UI, Word add-in, GTM, and private docs.
+
 ### Data Extractor
 - Rebuilt the document data extraction pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda.
 - Before: legacy architecture with no Docker, no Textract, broken OCR (Lambda couldn't read scanned PDFs).
 - Now: serves 400+ users, processes 2,800+ documents daily, saves users ~4 hours/week.
 - Benchmarked 15+ AWS Bedrock LLM models and OCR packages with synthetic test documents.
 - Improved accuracy by 15%, speed by 60%, reduced Docker image size and deploy time by 80%.
+- Migrated extraction from OpenAI/doctran to AWS Bedrock; evaluation PR reported 100% extraction accuracy on 22 test documents.
+- Replaced marker-pdf/PyTorch/Surya OCR with AWS Textract and Claude Haiku 4.5, reaching 99.7% accuracy while reducing Docker image size from ~8GB to <1GB.
+- Reduced Lambda resources: memory 10GB to 3GB, timeout 15min to 5min, storage 5GB to 512MB.
 - Replaced GPL-licensed packages and selected Textract models routed exclusively within North America for government data locality compliance.
 
 ### Status Page
@@ -24,6 +33,8 @@
 ### AI Agent
 - Created an AI assistant agent using CopilotKit, Mastra, and OpenAI API.
 - Users can create client files, fill out forms, query legal information, and perform any in-app action through natural language (similar to Claude Cowork, but for family law).
+- Rebuilt the agent with Mastra + CopilotKit integration, PostgreSQL-backed persistent conversations, server-side tools, approval flows, and 49 frontend actions across major workflow domains.
+- Shipped PDF and Word upload in the chat rail with per-thread S3 attachments, file extraction, drag-and-drop UI, attachment chips, and approval-driven movement into client folders or disclosure entities.
 - In production.
 
 ### Data Collection (GTM)
@@ -35,6 +46,11 @@
 ### Testing
 - Authored 1,000+ tests across all implemented features.
 - Frontend: Vitest (unit), Playwright (integration). Backend: bun:test (unit).
+
+### Platform Reliability / Engineering Quality
+- Upgraded Bun, added isolated test execution, strengthened pre-commit/pre-push checks, parallelized CI, and added non-blocking code-health checks.
+- Test isolation work surfaced a real production audit-trail sanitization bug where user ID foreign keys were being transformed as names.
+- Hardened production workflows across custom interviews, autosave, income merge matching, rate-limit error handling, document edit locks, and agent message persistence.
 
 ### SOC 2
 - SOC 2 Type I achieved. Type II in progress.
@@ -62,11 +78,11 @@
 **Nov 2025 - Present** | **Calgary, AB**
 
 - Rebuilt the document data extraction pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, serving 400+ users and processing 2,800+ documents daily while saving users an average of 4 hours of manual work per week.
-- Benchmarked 15+ AWS Bedrock LLM models and OCR packages using synthetic test documents, improving extraction accuracy by 15% and speed by 60% while reducing Docker container size and deployment time by 80%.
-- Built an internal analytics dashboard tracking 67 metrics across 7 sections using React, TypeScript, and GraphQL, providing leadership with actionable insights on user engagement, feature adoption, and organization health.
-- Created an AI assistant agent using CopilotKit, Mastra, and OpenAI API, enabling users to create client files, fill out forms, and query legal information through natural language.
-- Built a production service status page monitoring 8 services with Sanity CMS and Slack integration, delivering automated incident notifications within 60 seconds and hosting public incident reports.
+- Migrated extraction from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.
+- Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, and legal workflow automation through natural language.
+- Shipped PDF and Word document upload in the AI chat rail, including per-thread S3 attachments, file extraction, drag-and-drop UI, and approval-driven movement into client folders or disclosure entities.
+- Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.
 - Built a data collection system using Bun, TypeScript, AWS RDS, and web scraping, sourcing 10,000+ potential client contacts and generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.
-- Authored over 1,000 unit and integration tests using Vitest, bun:test, and Playwright across all implemented features, ensuring code reliability and preventing regressions.
+- Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.
 
-**Tech**: TypeScript, Python, React, GraphQL, Docker, AWS, PostgreSQL, Prisma, Bun, Sanity, Attio
+**Tech**: TypeScript, Python, React, GraphQL, Docker, AWS, PostgreSQL, Prisma, Bun, OpenAI, Sanity, Attio
