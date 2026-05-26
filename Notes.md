@@ -77,12 +77,12 @@
 **Divorcepath** — Software Engineer  
 **Nov 2025 - Present** | **Calgary, AB**
 
-- Rebuilt the document data extraction pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, serving 400+ users and processing 2,800+ documents daily while saving users an average of 4 hours of manual work per week.
-- Migrated extraction from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.
+- Built an OCR/LLM-powered document ETL pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, extracting and normalizing legal document data for 400+ users while processing 2,800+ documents daily and saving users an average of 4 hours per week.
+- Migrated the extraction pipeline from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.
 - Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, and legal workflow automation through natural language.
 - Shipped PDF and Word document upload in the AI chat rail, including per-thread S3 attachments, file extraction, drag-and-drop UI, and approval-driven movement into client folders or disclosure entities.
 - Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.
-- Built a data collection system using Bun, TypeScript, AWS RDS, and web scraping, sourcing 10,000+ potential client contacts and generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.
+- Built a GTM ETL pipeline using Bun, TypeScript, AWS RDS, and web scraping to extract, normalize, and load 10,000+ potential client contacts, generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.
 - Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.
 
 **Tech**: TypeScript, Python, React, GraphQL, Docker, AWS, PostgreSQL, Prisma, Bun, OpenAI, Sanity, Attio

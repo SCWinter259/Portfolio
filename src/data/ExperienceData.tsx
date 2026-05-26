@@ -44,12 +44,12 @@ export const experiences: Experience[] = [
     duration: "Nov 2025 - Present",
     location: "Calgary, AB",
     achievements: [
-      "Rebuilt the document data extraction pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, serving 400+ users and processing 2,800+ documents daily while saving users an average of 4 hours of manual work per week.",
-      "Migrated extraction from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.",
+      "Built an OCR/LLM-powered document ETL pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, extracting and normalizing legal document data for 400+ users while processing 2,800+ documents daily and saving users an average of 4 hours per week.",
+      "Migrated the extraction pipeline from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.",
       "Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, and legal workflow automation through natural language.",
       "Shipped PDF and Word document upload in the AI chat rail, including per-thread S3 attachments, file extraction, drag-and-drop UI, and approval-driven movement into client folders or disclosure entities.",
       "Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.",
-      "Built a data collection system using Bun, TypeScript, AWS RDS, and web scraping, sourcing 10,000+ potential client contacts and generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
+      "Built a GTM ETL pipeline using Bun, TypeScript, AWS RDS, and web scraping to extract, normalize, and load 10,000+ potential client contacts, generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
       "Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.",
     ],
     tech: [
@@ -87,10 +87,10 @@ export const experiences: Experience[] = [
     duration: "Jan 2024 - Aug 2024",
     location: "Waterloo, ON",
     achievements: [
-      "Engineered and deployed 2 data connectors (seat weight, car speed) using C++ and the BlackBerry IVY platform, running on QNX OS emulated with QEMU.",
+      "Engineered and deployed 2 vehicle telemetry data connectors in C++ for seat-weight and car-speed signals on the BlackBerry IVY platform, transforming sensor data for downstream applications on QNX emulated with QEMU.",
       "Resolved critical production failures by debugging and restoring 2 GitLab CI/CD pipelines, leveraging Python and the Jira API to improve average runtime by 6%.",
       "Enhanced team productivity by developing a BASH script that automated and streamlined the QNX TechPubs onboarding process for new Linux-based team members.",
-      "Contributed to improve developer experience on the BlackBerry IVY platform by authoring comprehensive framework documentation and technical guides.",
+      "Improved developer experience on the BlackBerry IVY platform by authoring comprehensive framework documentation and technical guides.",
     ],
     tech: [
       <FaPython size={20} color={iconColors.python} />,
