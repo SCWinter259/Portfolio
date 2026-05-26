@@ -45,6 +45,8 @@ export const iconColors = {
     bun: "#FBF0DF",
     openai: "#412991",
     aws: "#FF9900",
+    stripe: "#635BFF",
+    zapier: "#FF4A00",
 };
 
 export const themeColors = {

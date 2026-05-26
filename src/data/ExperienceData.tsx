@@ -7,6 +7,7 @@ import {
   FaCss3,
   FaAws,
   FaDocker,
+  FaStripe,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -28,6 +29,7 @@ import {
   SiPrisma,
   SiBun,
   SiOpenai,
+  SiZapier,
 } from "react-icons/si";
 import type { Experience } from "../types/Experience";
 import { iconColors } from "../constants/colors";
@@ -45,11 +47,10 @@ export const experiences: Experience[] = [
     location: "Calgary, AB",
     achievements: [
       "Built an OCR/LLM-powered document ETL pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, extracting and normalizing legal document data for 400+ users while processing 2,800+ documents daily and saving users an average of 4 hours per week.",
-      "Migrated the extraction pipeline from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from ~8GB to <1GB and Lambda memory from 10GB to 3GB.",
-      "Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, and legal workflow automation through natural language.",
-      "Shipped PDF and Word document upload in the AI chat rail, including per-thread S3 attachments, file extraction, drag-and-drop UI, and approval-driven movement into client folders or disclosure entities.",
+      "Migrated the extraction pipeline from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from 8GB to less than 1GB and average processing time by 60%.",
+      "Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, legal workflow automation, and PDF/Word document upload with S3-backed attachments.",
       "Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.",
-      "Built a GTM ETL pipeline using Bun, TypeScript, AWS RDS, and web scraping to extract, normalize, and load 10,000+ potential client contacts, generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
+      "Built a GTM ETL and automation pipeline using Bun, TypeScript, AWS RDS, web scraping, Stripe webhooks, Zapier, and Attio to extract, normalize, and route 10,000+ potential client contacts, generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
       "Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.",
     ],
     tech: [
@@ -63,6 +64,8 @@ export const experiences: Experience[] = [
       <SiPrisma size={20} color={iconColors.prisma} />,
       <SiBun size={20} color={iconColors.bun} />,
       <SiOpenai size={20} color={iconColors.openai} />,
+      <FaStripe size={20} color={iconColors.stripe} />,
+      <SiZapier size={20} color={iconColors.zapier} />,
     ],
   },
   {
