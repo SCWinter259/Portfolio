@@ -12,7 +12,6 @@ import { FaReact, FaNodeJs, FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   SiTypescript,
   SiPython,
-  SiTailwindcss,
   SiBun,
   SiFirebase,
   SiPostgresql,
