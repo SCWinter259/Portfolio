@@ -31,11 +31,6 @@ const techStack = [
   },
   { icon: <FaReact size={28} />, color: iconColors.react, label: "React" },
   {
-    icon: <SiTailwindcss size={28} />,
-    color: iconColors.tailwindcss,
-    label: "Tailwind",
-  },
-  {
     icon: <FaNodeJs size={28} />,
     color: iconColors.nodejs,
     label: "Node.js",
@@ -120,10 +115,12 @@ const AboutMe = () => {
               variant="body1"
               sx={{ color: themeColors.textMuted, lineHeight: 1.8, mb: 3 }}
             >
-              I'm a software engineer with 2 years of industry experience. I
-              specialize in full-stack web development and enjoy building
-              things end-to-end — from frontend interfaces to backend
-              pipelines, testing, and cloud infrastructure. 
+              I'm Casper, a Software Engineer with 2+ years of experience. 
+              I graduated from the University of Alberta in 2025 with a Bachelor of Science in Computing Science. 
+              Most of my work is focused on full-stack web development, with a specialty in integrating AI features 
+              into existing software. I have a special passion for automation (writing Bash scripts, Cloud CI/CD 
+              pipelines), writing good documentation, and maintaining clean code.
+              I also enjoy (and have some experience in) Mobile Development.
             </Typography>
 
             <Stack

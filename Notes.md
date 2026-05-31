@@ -38,8 +38,12 @@
 
 - Created an AI assistant agent using CopilotKit, Mastra, and OpenAI API.
 - Users can create client files, fill out forms, query legal information, and perform any in-app action through natural language (similar to Claude Cowork, but for family law).
-- Rebuilt the agent with Mastra + CopilotKit integration, PostgreSQL-backed persistent conversations, server-side tools, approval flows, and 49 frontend actions across major workflow domains.
+- Rebuilt the agent with Mastra + CopilotKit integration, PostgreSQL-backed persistent conversations, server-side tools, route-aware planning, approval flows, and 49 frontend actions across major workflow domains.
+- Built a contract-driven action registry where each backend capability mirrors a frontend form/workflow contract, allowing the agent to select tools, stage intents, request approval, and commit changes through a consistent approval-gated mutation flow.
+- Implemented multi-step workflow execution with intent routing, action chaining, deterministic tool filtering, read-before-write context gathering, and safeguards against skipped approvals or incomplete commits.
 - Shipped PDF and Word upload in the chat rail with per-thread S3 attachments, file extraction, drag-and-drop UI, attachment chips, and approval-driven movement into client folders or disclosure entities.
+- Enabled document-grounded form filling by extracting uploaded PDF/Word content and using the extracted context to populate client files, disclosure entities, and other app workflows.
+- Positioning note: strongest framing is agentic AI / production LLM workflow automation, not classic RAG, because the system centers on tool orchestration, app-state retrieval, document understanding, and approval-gated actions rather than vector search over a knowledge base.
 - In production.
 
 ### Data Collection (GTM)
@@ -80,7 +84,8 @@
 - Frontend: React, Vitest, Playwright
 - Backend: Bun, Prisma, PostgreSQL, GraphQL, Docker
 - Cloud: AWS (Lambda, Textract, Bedrock, S3, RDS, Elastic Beanstalk, CloudWatch, ECR, CloudFormation)
-- Platforms: OpenAI, Sanity, Attio, Zapier, Stripe, Sentry, GitHub CI/CD
+- AI / Agents: OpenAI API, Mastra, CopilotKit, tool calling, persistent memory, approval-gated workflows
+- Platforms: Sanity, Attio, Zapier, Stripe, Sentry, GitHub CI/CD
 
 ---
 
@@ -91,9 +96,9 @@
 
 - Built an OCR/LLM-powered document ETL pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, extracting and normalizing legal document data for 400+ users while processing 2,800+ documents daily and saving users an average of 4 hours per week.
 - Migrated the extraction pipeline from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from 8GB to less than 1GB and average processing time by 60%.
-- Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, legal workflow automation, and PDF/Word document upload with S3-backed attachments.
+- Built a production AI legal-workflow agent with Mastra, CopilotKit, OpenAI, PostgreSQL, GraphQL, and AWS S3, enabling persistent conversational memory, planning, tool calling, multi-step workflow execution, and form filling from uploaded PDF/Word files.
 - Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.
 - Built a GTM ETL and automation pipeline using Bun, TypeScript, AWS RDS, web scraping, Stripe webhooks, Zapier, and Attio to extract, normalize, and route 10,000+ potential client contacts, generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.
 - Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.
 
-**Tech**: TypeScript, Python, React, GraphQL, Docker, AWS, PostgreSQL, Prisma, Bun, OpenAI, Sanity, Attio, Zapier, Stripe
+**Tech**: TypeScript, JavaScript, Python, React, GraphQL, Docker, AWS, PostgreSQL, Prisma, Bun, OpenAI, Sanity, Attio, Zapier, Stripe

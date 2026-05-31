@@ -42,19 +42,20 @@ export const experiences: Experience[] = [
   {
     company: "Divorcepath",
     logo: divorcepathLogo,
-    role: "Software Engineer",
+    role: "Software Engineer / AI Engineer",
     duration: "Nov 2025 - Present",
     location: "Calgary, AB",
     achievements: [
       "Built an OCR/LLM-powered document ETL pipeline using Python, AWS Textract, AWS Bedrock, and AWS Lambda, extracting and normalizing legal document data for 400+ users while processing 2,800+ documents daily and saving users an average of 4 hours per week.",
       "Migrated the extraction pipeline from OpenAI/doctran and ML-heavy OCR to AWS Bedrock and Textract, reaching 99.7% extraction accuracy while reducing Docker image size from 8GB to less than 1GB and average processing time by 60%.",
-      "Built an AI assistant agent with Mastra, CopilotKit, OpenAI, PostgreSQL, and GraphQL, enabling persistent conversations, approval-based actions, client file creation, form filling, legal workflow automation, and PDF/Word document upload with S3-backed attachments.",
+      "Built a production AI legal-workflow agent with Mastra, CopilotKit, OpenAI, PostgreSQL, GraphQL, and AWS S3, enabling persistent conversational memory, planning, tool calling, multi-step workflow execution, and form filling from uploaded PDF/Word files.",
       "Built an internal analytics dashboard tracking 67 metrics across platform usage, activation funnels, retention cohorts, organization health, feature adoption, and per-user engagement for executive decision-making.",
       "Built a GTM ETL and automation pipeline using Bun, TypeScript, AWS RDS, web scraping, Stripe webhooks, Zapier, and Attio to extract, normalize, and route 10,000+ potential client contacts, generating $2,080 CAD in revenue within the first 2 weeks of marketing campaigns.",
       "Improved engineering reliability across API and UI repositories by upgrading Bun, adding isolated test execution, strengthening pre-commit/pre-push checks, parallelizing CI, and authoring 1,000+ unit and integration tests with Vitest, bun:test, and Playwright.",
     ],
     tech: [
       <SiTypescript size={20} color={iconColors.typescript} />,
+      <SiJavascript size={20} color={iconColors.javascript} />,
       <FaPython size={20} color={iconColors.python} />,
       <FaReact size={20} color={iconColors.react} />,
       <SiGraphql size={20} color={iconColors.graphql} />,

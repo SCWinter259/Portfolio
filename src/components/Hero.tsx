@@ -112,7 +112,7 @@ const Hero = () => {
               fontSize: { xs: "1.2rem", md: "1.5rem" },
             }}
           >
-            Full Stack Developer
+            Software Engineer / AI Engineer
           </Typography>
         </motion.div>
 
@@ -128,7 +128,7 @@ const Hero = () => {
               fontSize: { xs: "0.95rem", md: "1.05rem" },
             }}
           >
-            I build modern web applications with a passion for clean code and
+            I build modern applications with a passion for clean code and
             great user experiences.
           </Typography>
         </motion.div>
